@@ -2,10 +2,6 @@ package main
 
 import "fmt"
 
-func main() {
-
-}
-
 var (
 	name string = "Dima"
 	age  int    = 23
@@ -83,4 +79,57 @@ func stepic_1_5_16() {
 	fmt.Scan(&angle)
 
 	fmt.Println("It is", angle/30, "hours", angle*2%60, "minutes.")
+}
+
+/*
+На ввод подается целое число. Если число положительное - вывести сообщение
+"Число положительное", если число отрицательное - "Число отрицательное".
+Если подается ноль - вывести сообщение "Ноль". Выводить сообщение без кавычек.
+*/
+
+func stepic_1_9_5() {
+
+	var a int
+	fmt.Scan(&a)
+	if a < 0 {
+		fmt.Println("Число положительное")
+	} else if a < 0 {
+		fmt.Println("Число отрицательное")
+	} else if a == 0 {
+		fmt.Println("Ноль")
+	}
+}
+
+// По данному трехзначному числу определите, все ли его цифры различны.
+func stepic_1_9_6() {
+	var a int
+	fmt.Scan(&a)
+	if a%10 != a%100/10 && a%10 != a/100 && a%100/10 != a/100 {
+		fmt.Println("YES")
+	} else {
+		fmt.Println("NO")
+	}
+}
+
+//Дано неотрицательное целое число. Найдите и выведите первую цифру числа.
+
+func stepic_1_9_7() {
+	var a int
+	fmt.Scan(&a)
+	if a == 10000 {
+		fmt.Println(a / 10000)
+	} else if a < 10000 && a >= 1000 {
+		fmt.Println(a / 1000)
+	} else if a < 1000 && a >= 100 {
+		fmt.Println(a / 100)
+	} else if a < 100 && a >= 10 {
+		fmt.Println(a / 10)
+	} else if a < 10 {
+		fmt.Println(a)
+	}
+
+}
+
+func stepic_1_9_8() {
+
 }
