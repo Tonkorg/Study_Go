@@ -132,4 +132,55 @@ func stepic_1_9_7() {
 
 func stepic_1_9_8() {
 
+	var a string
+	fmt.Scan(&a)
+
+	if int((a[0]))+int(a[1])+int(a[2]) == int(a[3])+int(a[4])+int(a[5]) {
+		fmt.Println("YES")
+	} else {
+		fmt.Println("NO")
+	}
+}
+
+func stepic_1_9_8_v2() {
+	var s string
+	fmt.Scan(&s)
+	if s[0]+s[1]+s[2] == s[3]+s[4]+s[5] {
+		fmt.Print("YES")
+	} else {
+		fmt.Print("NO")
+	}
+}
+
+/*
+Требуется определить, является ли данный год високосным, напомним:
+Год является високосным если он соответствует хотя бы одному из нижеперечисленных условий:
+- кратен 400;
+- кратен 4, но не кратен 100.
+*/
+func stepic_1_9_9() {
+	var a int
+	fmt.Scan(&a)
+	if a%400 == 0 || (a%4 == 0 && a%100 != 0) {
+		fmt.Println("YES")
+	} else {
+		fmt.Println("NO")
+	}
+}
+
+func stepic_1_10_2() {
+
+	for a := 1; a <= 10; a++ {
+		fmt.Println(a * a)
+	}
+}
+
+func stepic_1_10_3() {
+	var a, b int
+	fmt.Scanf("%d %d", &a, &b)
+	var sum = 0
+	for ; a <= b; a++ {
+		sum += a
+	}
+	fmt.Println(sum)
 }
