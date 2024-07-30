@@ -362,3 +362,85 @@ func stepic_1_12_5() {
 	}
 
 }
+
+func myTest1() {
+	a := [10]int{}
+	var b = a
+	b[1] = 202
+	var c [10]int
+	c = a
+	c[1] = 200
+	fmt.Println(a, b, c)
+
+}
+
+func stepic_1_12_13() {
+
+	var a int
+	fmt.Scan(&a)
+
+	mas := make([]int, a)
+
+	for i := 0; i < a; i++ {
+		fmt.Scan(a)
+		mas[i] = a
+	}
+	fmt.Println(mas[3])
+}
+
+func stepic_1_12_14() {
+	array := [5]int{}
+	var a int
+	var m = -200000
+	for i := 0; i < 5; i++ {
+		fmt.Scan(&a)
+		array[i] = a
+
+		if m <= array[i] {
+			m = array[i]
+		}
+	}
+	fmt.Println(m)
+}
+
+//Дан массив, состоящий из целых чисел. Нумерация элементов начинается с 0.
+//Напишите программу, которая выведет элементы массива, индексы которых четны (0, 2, 4...).
+
+func stepic_1_12_15() {
+
+	var a int
+	fmt.Scan(&a)
+
+	var b = make([]int, a)
+
+	for i := 0; i < a; i++ {
+		fmt.Scan(&b[i])
+		if i%2 == 0 {
+			fmt.Print(b[i], " ")
+		}
+	}
+}
+
+//Дана последовательность, состоящая из целых чисел. Напишите программу,
+//которая подсчитывает количество положительных чисел среди элементов последовательность
+
+func stepic_1_12_16() {
+
+	var a, count int
+	fmt.Scan(&a)
+
+	var b = make([]int, a)
+
+	for i := 0; i < a; i++ {
+		fmt.Scan(&b[i])
+		if b[i] > 0 {
+			count++
+
+		}
+	}
+	fmt.Println(count)
+} // можно было закидывать в массив только положительные числа, а потом выкидывать чисто длину массива
+
+func stepic_1_13_1() {
+
+}
